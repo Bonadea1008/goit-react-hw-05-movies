@@ -1,0 +1,27 @@
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1280px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid black;
+}
+
+.navLink {
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
