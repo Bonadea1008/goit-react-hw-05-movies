@@ -1,5 +1,6 @@
+import Loader from '../../components/Loader';
 import { fetchMoviesById } from 'Services/fetchAPI';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import {
   useParams,
   useLocation,
@@ -68,7 +69,9 @@ const MovieDetails = () => {
               </li>
             </ul>
           </div>
-          <Outlet />
+          <Suspense fallback={<Loader />}>
+            <Outlet />
+          </Suspense>
         </>
       )}
     </>
