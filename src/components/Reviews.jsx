@@ -13,19 +13,21 @@ const Reviews = () => {
 
   return (
     <>
-      {reviews.length !== 0 && (
+      {reviews.length !== 0 ? (
         <section>
           <ul>
             {reviews.map(({ id, author, content }) => {
               return (
                 <li key={id}>
-                  <h2>{author}</h2>
+                  <h3>Author: {author}</h3>
                   <p>{content}</p>
                 </li>
               );
             })}
           </ul>
         </section>
+      ) : (
+        <p>We don'/t have any reviews for this movie</p>
       )}
     </>
   );

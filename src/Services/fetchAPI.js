@@ -50,3 +50,15 @@ export function fetchReviewsByMovieId(id) {
       }
     });
 }
+
+export function fetchSearchMovie(query) {
+  return axios
+    .get(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`)
+    .then(response => {
+      if (response.status === 200) {
+        return response;
+      } else {
+        return Promise.reject(new Error('There is no movies'));
+      }
+    });
+}

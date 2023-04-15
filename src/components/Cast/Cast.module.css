@@ -17,7 +17,7 @@
 .castImg {
   display: block;
   object-fit: contain;
-  height: auto;
+  height: 225px;
 }
 
 .castName {
